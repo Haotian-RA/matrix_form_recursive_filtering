@@ -1,0 +1,30 @@
+# Build artifacts
+*.o
+*.out
+a.out
+/build/
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# LibreOffice lock files
+.~lock.*
+
+# Temporary files
+*.tmp
+/tmp/

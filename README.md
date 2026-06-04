@@ -4,7 +4,7 @@ A high-performance C++ header-only library for parallel IIR (recursive) filterin
 
 This library accompanies the paper:
 
-> **H. Zhai and B.-P. Paris**, "Fast Cascaded Recursive Filtering via a Block-Matrix Reformulation," submitted to *IEEE Transactions on Signal Processing*, 2025. [[arXiv]](https://arxiv.org/)
+> **H. Zhai and B.-P. Paris**, "Fast Cascaded Recursive Filtering via a Block-Matrix Reformulation," submitted to *IEEE Transactions on Signal Processing*, 2026. [[arXiv]](https://arxiv.org/)
 
 ## Overview
 
@@ -225,11 +225,11 @@ The theory and measurement notebooks use LaTeX features that GitHub cannot rende
 If you use this library in your research, please cite:
 
 ```bibtex
-@article{zhai2025fast,
+@article{zhai2026fast,
   author  = {Zhai, Haotian and Paris, Bernd-Peter},
   title   = {Fast Cascaded Recursive Filtering via a Block-Matrix Reformulation},
   journal = {arXiv preprint},
-  year    = {2025}
+  year    = {2026}
 }
 ```
 

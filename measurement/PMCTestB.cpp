@@ -26,15 +26,15 @@
 #include "PMCTest.h"
 #include <array>
 #include <numeric>
-#include "../../vcl/vectorclass.h"
+#include "../../matrix_form_recursive_filtering/src/vcl/vectorclass.h"
 
-#include "../../best_testbed/include/permute.h"
-#include "../../best_testbed/include/fir_cores.h"
-#include "../../best_testbed/include/ph_decompos.h"
-#include "../../best_testbed/include/block_filtering.h"
-#include "../../best_testbed/include/iir_cores.h"
-#include "../../best_testbed/include/cyclic_reduction.h"
-#include "../../best_testbed/include/filter.h"
+#include "../../matrix_form_recursive_filtering/include/permute.h"
+#include "../../matrix_form_recursive_filtering/include/fir_cores.h"
+#include "../../matrix_form_recursive_filtering/include/ph_decompos.h"
+#include "../../matrix_form_recursive_filtering/include/block_filtering.h"
+#include "../../matrix_form_recursive_filtering/include/iir_cores.h"
+#include "../../matrix_form_recursive_filtering/include/cyclic_reduction.h"
+#include "../../matrix_form_recursive_filtering/include/filter.h"
 
 
 /*############################################################################

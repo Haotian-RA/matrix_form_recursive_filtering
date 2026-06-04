@@ -49,12 +49,12 @@ fi
 echo
 
 # Create directory for storing individual run results
-RESULTS_DIR="$HOME/best_testbed/measurement/multi_run_results"
+RESULTS_DIR="$HOME/matrix_form_recursive_filtering/measurement/multi_run_results"
 mkdir -p "$RESULTS_DIR"
 
 # Clear previous results
 rm -f "$RESULTS_DIR"/*.txt
-rm -f "$HOME/best_testbed/measurement/filtered_means.txt"
+rm -f "$HOME/matrix_form_recursive_filtering/measurement/filtered_means.txt"
 
 # Path to PMCTest directory and files
 PMCTEST_DIR="$HOME/testp/PMCTest"
@@ -335,7 +335,7 @@ echo "=== ANALYSIS PHASE ==="
 echo "Analyzing results..."
 
 # Run the multi-run analysis
-cd "$HOME/best_testbed/measurement"
+cd "$HOME/matrix_form_recursive_filtering/measurement"
 python3 data_analyze.py "$RESULTS_DIR" "$NUM_RUNS" "$SECOND_SIGMA"
 
 if [ $? -eq 0 ]; then
@@ -343,7 +343,7 @@ if [ $? -eq 0 ]; then
     echo "=== Analysis Complete ==="
     echo "Results saved to:"
     echo "  - Individual runs: $RESULTS_DIR/"
-    echo "  - Filtered means: ~/best_testbed/measurement/filtered_means.txt"
+    echo "  - Filtered means: ~/matrix_form_recursive_filtering/measurement/filtered_means.txt"
 else
     echo "Error: Multi-run analysis failed"
     exit 1

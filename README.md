@@ -1,10 +1,10 @@
-# Fast Cascaded Recursive Filtering via a Block-Matrix Reformulation
+# SIMD-Parallel IIR Filter Library for Cascaded Biquads
 
 A high-performance C++ header-only library for parallel IIR (recursive) filtering of cascaded second-order sections (biquads) using SIMD vector instructions.
 
 This library accompanies the paper:
 
-> **H. Zhai and B.-P. Paris**, "Fast Cascaded Recursive Filtering via a Block-Matrix Reformulation," *IEEE Transactions on Signal Processing*, 2025.
+> **H. Zhai and B.-P. Paris**, "Fast Cascaded Recursive Filtering via a Block-Matrix Reformulation," submitted to *IEEE Transactions on Signal Processing*, 2025. [[arXiv]](https://arxiv.org/)
 
 ## Overview
 
@@ -73,7 +73,7 @@ On a single Meteor Lake core at 4.5 GHz, cyclic reduction achieves the lowest CP
 
 ## Dependencies
 
-- **C++20** compiler with AVX2/FMA support (Clang 14+ or GCC 12+ recommended)
+- **C++20** compiler with AVX2/FMA support (Clang 18+ recommended; GCC with C++20 and AVX2 support also works)
 - **Agner Fog's Vector Class Library (VCL)** — portable SIMD intrinsics
 - **doctest** — header-only unit testing (included in `src/`)
 
@@ -158,7 +158,7 @@ For detailed per-stage hardware counter measurements (clock cycles, µops, cache
 
 **Setup:**
 
-1. Download `testp` from [agner.org/optimize](https://www.agner.org/optimize/) and extract it to `~/testp/`
+1. Download `testp` from [agner.org/optimize](https://www.agner.org/optimize/) and extract it to `~/testp/`.
 2. Build and load the MSRdrv kernel driver:
    ```bash
    cd ~/testp/DriverSrcLinux
@@ -166,7 +166,7 @@ For detailed per-stage hardware counter measurements (clock cycles, µops, cache
    sudo sh install.sh
    ```
    Note: the driver must be reloaded after every reboot.
-3. Copy `measurement/PMCTestB.cpp` and `measurement/c64.sh` into `~/testp/PMCTest/`
+3. Place `measurement/PMCTestB.cpp` and `measurement/c64.sh` into `~/testp/PMCTest/`, replacing the defaults that came with testp. The measurement script `pmc_measure.sh` will then modify `PMCTestB.cpp` in place via `sed` to configure each benchmark run (setting the vector type, block size, and test function automatically).
 
 **Running measurements:**
 
@@ -228,10 +228,12 @@ If you use this library in your research, please cite:
 @article{zhai2025fast,
   author  = {Zhai, Haotian and Paris, Bernd-Peter},
   title   = {Fast Cascaded Recursive Filtering via a Block-Matrix Reformulation},
-  journal = {IEEE Transactions on Signal Processing},
+  journal = {arXiv preprint},
   year    = {2025}
 }
 ```
+
+The citation will be updated once the paper is published.
 
 ## License
 

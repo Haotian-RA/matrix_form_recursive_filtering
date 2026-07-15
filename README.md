@@ -5,6 +5,7 @@ A high-performance C++ header-only library for parallel IIR (recursive) filterin
 This library accompanies the papers:
 
 > **H. Zhai and B.-P. Paris**, "Fast Cascaded Recursive Filtering via a Block-Matrix Reformulation," to be submitted to *IEEE Transactions on Signal Processing*, 2026. (Pre-print available on Arxiv).
+
 > **H. Zhai and B.-P. Paris**, "Parallel Cascaded Recursive Filtering on Multi-Core CPUs and GPUs," to be submitted to *IEEE Transactions on Parallel and Distributed Systems*, 2026. (Pre-print available on Arxiv).
 
 ## Overview
